@@ -8,6 +8,9 @@ function ExpenseItem(props) {
     
     props.deleteExpense(props.id);
   };
+  const changeExpenseamt = () => {
+    props.changeexpense(props.id);
+  };
  
   return (
     <Card className='expense-item'>
@@ -20,6 +23,7 @@ function ExpenseItem(props) {
     
     
      <button onClick={deleteExpenseHandler}>Delete Expense</button>
+     <button onClick={changeExpenseamt}>Amt change</button>
     </Card>
    
   );
