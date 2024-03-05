@@ -4,8 +4,8 @@ import Expenses from './component/Expense/Expenses';
 import NewExpense from './component/NewExpense/NewExpense';
 
 
-function App() {
-  const [expenses, setExpenses] =useState([
+
+  const DUMMY_EXPENSES=[
 
     {
       id: 1,
@@ -29,7 +29,9 @@ function App() {
       date: new Date(2021, 1, 14),
       locationofexpenditure:'pune'
     }
-  ]);
+  ]
+  const App = () => {
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
  const deleteExpense = (id) => {
   console.log('Deleting expense with id:', id);
